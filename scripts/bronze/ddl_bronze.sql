@@ -9,11 +9,11 @@ if they already exist.
 ===================================================================
 */
 
-IF OBJET_ID('crm_cust_info', 'U') is NOT NULL
+IF OBJET_ID('bronze.crm_cust_info', 'U') is NOT NULL
 DROP TABLE crm_cust_info;
 GO
 
-CREATE TABLE crm_cust_info ( 
+CREATE TABLE bronze.crm_cust_info ( 
 cst_id           INT,
 cst_key          NVARCHAR(50),
 cst_firstname    NVARCHAR(50),
@@ -24,10 +24,10 @@ cst_create_date     DATE
 );
 GO
 
-IF OBJECT_ID('crm_prd_info','U') IS NOT NULL
+IF OBJECT_ID('bronze.crm_prd_info','U') IS NOT NULL
 DROP TABLE crm_prd_info;
 GO
-CREATE TABLE crm_prd_info (
+CREATE TABLE bronze.crm_prd_info (
     prd_id       INT,
     prd_key      NVARCHAR(50),
     prd_nm       NVARCHAR(50),
@@ -37,7 +37,7 @@ CREATE TABLE crm_prd_info (
     prd_end_dt   DATETIME
   );
 GO
-IF OBJECT_ID('crm_sales_details' , 'U') IS NOT NULL
+IF OBJECT_ID('bronze.crm_sales_details' , 'U') IS NOT NULL
 DROP TABLE crm_sales_details
 GO
 CREATE TABLE bronze.crm_sales_details (
