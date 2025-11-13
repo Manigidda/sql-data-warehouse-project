@@ -10,7 +10,7 @@ if they already exist.
 */
 
 IF OBJET_ID('bronze.crm_cust_info', 'U') is NOT NULL
-DROP TABLE crm_cust_info;
+DROP TABLE bronze.crm_cust_info;
 GO
 
 CREATE TABLE bronze.crm_cust_info ( 
@@ -25,7 +25,7 @@ cst_create_date     DATE
 GO
 
 IF OBJECT_ID('bronze.crm_prd_info','U') IS NOT NULL
-DROP TABLE crm_prd_info;
+DROP TABLE bronze.crm_prd_info;
 GO
 CREATE TABLE bronze.crm_prd_info (
     prd_id       INT,
@@ -38,7 +38,7 @@ CREATE TABLE bronze.crm_prd_info (
   );
 GO
 IF OBJECT_ID('bronze.crm_sales_details' , 'U') IS NOT NULL
-DROP TABLE crm_sales_details
+DROP TABLE bronze.crm_sales_details
 GO
 CREATE TABLE bronze.crm_sales_details (
     sls_ord_num  NVARCHAR(50),
